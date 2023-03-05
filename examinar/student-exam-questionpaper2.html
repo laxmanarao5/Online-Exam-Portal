@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>exam</title>
+    <style type="text/css">
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+
+        a{
+            color: white;
+            font-style: bold;
+            padding:5px 10px;
+            border: 1px solid;
+            margin-top: 40px;
+            background-color:blueviolet;
+            text-decoration: none;
+            border-radius:5px; 
+         }
+
+         a:link{
+              text-decoration: none;
+              color: #fff;
+         }
+
+         a:hover{
+            color: white;
+            text-decoration: none;
+
+         }
+
+         .nav-bar{
+            text-align: left;
+            margin-top:1rem;
+            display: inline-block;
+
+         }
+
+         .nav-bar a{
+            margin:3px;
+         }
+
+         .row{
+            /* height:80vh; */
+            background-color: lightgray;
+            border-radius: 10px;
+            margin-top:20px;
+            margin-left:0.2rem;
+            text-align:justify;
+            display:inline-block;
+            
+         }
+         .button1{
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 2px;
+            padding: 5px 15px;
+            font-weight: 700;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        table{
+            margin: auto;
+            margin-top: 10vh;
+        }
+        label{
+            font-size: 15px;
+            margin-top: 20px;
+            font-family: 'poppins';
+        }
+        input{
+            font-size: 10px;
+            margin-top: 10px;
+        }
+        form{
+            margin: auto;
+        }
+        .button{
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 2px;
+            padding: 5px 15px;
+            font-weight: 700;
+            margin-top: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .exam{
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+        }
+        label{
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-weight: 800;
+        }
+        .o{
+            display: flex;
+        }
+        input{
+            width: 100%;
+            font-size: 15px;
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+        }
+        p{
+            color: red;
+            font-weight: 700;
+        }
+        .op{
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="details">
+            <div class="col-5" >
+                <form action="ques.php" method="POST" class="exam">
+                    <label for="question">Question:</label> 
+                    <textarea name="question" id="question" cols="30" rows="3" placeholder="Enter question number 1 here.."></textarea>
+                     <label for="op1">Option 1:</label><span class="o"><input type="text" name="option1" id="op1" placeholder="Enter option a"></input></span>
+                     <label for="op2">Option 2:</label><span class="o"><input type="text" name="option2" id="op2" placeholder="Enter option b"></input></span>
+                     <label for="op3">Option 3:</label><span class="o"><input type="text" name="option3" id="op3" placeholder="Enter option c"></input></span>
+                     <label for="op4">Option 4:</label><span class="o"><input type="text" name="option4" id="op4" placeholder="Enter option d"></input></span>
+                     <label for="correct">Select the correct answer</label>
+                     <select name="correct" id="correct" class="op">
+                      <!-- <option value="select"></option> -->
+                      <option value="not selected">select answer for the above question</option>
+                      <option value="op1">option 1</option>
+                      <option value="op2">option 2</option>
+                      <option value="op3">option 3</option>
+                      <option value="op4">option 4</option>
+                  </select>
+                     
+                     <span class="buttons">
+                      <span>
+                     <span><input type="submit" name="next" value="Next" class="button"></span>
+                  </span>
+                  </form>
+
+            </div>
+            
+        </div>
+        
+
+        </div>
+        
+        
+    </div>
+ </body>
+</html>

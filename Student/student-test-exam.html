@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <style>
+        html,body{
+            overflow: hidden;
+        }
+
+        /* Student tests css starts here */
+        .student_tests-p1-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20vh;
+            padding: 20px;
+            border: 1px solid #11133e;
+            border-radius: 20px;
+
+        }
+        .student_tests-p1-content .heading{
+            font-weight: 800;
+        }
+        .student_tests-p1-content .button{
+            padding: 5px 15px;
+            background-color: #54B435;
+            border:none;
+            font-size: 14px;
+            border-radius: 3px;
+            color: white;
+            font-weight: 700;
+            margin-top: 30px;
+        }
+        .nav-bar{
+            display: flex;
+            height: 60px;
+            line-height: 60px;
+            border-bottom: 1px solid black;
+        }
+        .nav-bar .right{
+            width: 40%;
+        }
+        .student_test_exam_container .nav-bar .left{
+            height: 60px;
+            margin-left: 10px;
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .remaining-time,.claculator,.user{
+            margin-right: 30px;
+        }
+        .calculator button{
+            border: none;
+            font-size: 18px;
+        }
+        .user{
+            margin-left: 10px;
+            display: flex;
+        }
+        .user-image img{
+            border-radius: 100px;
+            margin-top: 15px;
+            margin-right: 10px;
+        }
+        .left .subject-name,.right .remaining-time-time,.user-name{
+            font-weight: 500;
+        }
+        .right .calculator a{
+            text-decoration: none;
+            color: black;
+        }
+        .right{
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .left-container{
+            padding-top: 10px;
+            padding-left: 10px;
+            width: 70%;
+            height: 90vh;
+            padding-right: 20px;
+            border-right: 1px solid black;
+        }
+        .left-container .question .que-no,.left-container .question .question-q{
+            font-weight: 900;
+        }
+        .left-container .question{
+            display: flex;
+            flex-direction: column;
+        }
+        .left-container .options-input{
+            display: flex;
+            flex-direction: column;
+            /* padding-left: 10px; */
+            padding-top: 10px;
+        }
+        .left-container .options .options-input label{
+            margin-left: 10px;
+        }
+        .left-container .options input{
+            accent-color: green;
+        }
+        .left-container .options .options-input input{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .left-container .options .buttons input{
+            padding: 5px 20px;
+            background-color: #11133e;
+            border: none;
+            color: white;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .left-container .options .buttons{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50vh; 
+        }
+        .student-exam-container{
+            display: flex;
+        }
+        .right-container{
+            width: 30%;
+            height: 90vh;
+        }
+        .right-container .heading{
+            font-weight: 800;
+            height: 60px;
+            width: 100%;
+            line-height: 60px;
+            text-align: center;
+            border-bottom: 1px solid black;
+        }
+        .right-container{
+            overflow-y: auto;
+        }
+
+        .right-container .question-nos{
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body onload="myFunction()">
+    <div class="student_test_exam_container" id="taketest">
+        <div class="nav-bar">
+            <span class="left">
+            <span class="subject">
+                <span>
+                    Subject:
+                </span>
+                <span class="subject-name">
+                    Web Development
+                </span>
+            </span>
+        </span>
+        <span class="right">
+            <div>
+            <span class="remaining-time">
+                <span>
+                    Remaining time:
+                </span>
+                <span class="remaining-time-time">
+                    30:05 min.
+                </span>
+            </span>
+            <span class="calculator">
+                        <button type="button" class="fa fa-calculator" onclick="javascript:window.open('http://ostermiller.org/calc/calculator.html','calculator'+new Date().getTime(),'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,copyhistory=no,width=450,height=300');"></button>
+            </span>
+        </div>
+            <div class="user">
+                <div class="user-image">
+                    <img src="images/user.JPG" height="30px" width="30px">
+                </div>
+                <div class="user-name">
+                    Ganesh
+                </div>
+            </div>
+        </span>
+        </div>
+        <div class="student-exam-container">
+        <div class="left-container">
+            <span class="question">
+                <span class="que-no">
+                    Q1:
+                </span>
+                <span class="question-q">
+                    What is the full form of HTML ?
+                </span>
+            </span>
+            <span class="options">
+                <form action="">
+                    <div class="options-input">
+                    <span class="input"><input type="radio" id="1" name="1"><label for="1">Hyper Text Makeup Language</label></span>
+                    <span class="input"><input type="radio" id="2" name="1"><label for="2">Hyper Text Markup Language</label></span>
+                    <span class="input"><input type="radio" id="3" name="1"><label for="3">Hyper Tutor Makeup Language</label></span>
+                    <span class="input"><input type="radio" id="4" name="1"><label for="4">Hyper Transfer Markup Language</label></span>
+                </div>
+                <span class="buttons">
+                    <span class="left-button">
+                        <input type="button" name="prev" value="Prev">
+                        <input type="button" name="mark" value="Mark">
+                    </span>
+                    <span class="right-buttons">
+                        <input type="button" name="next" value="Next">
+                    </span>
+                </span>
+                </form>
+            </span>
+        </div>
+        <div class="right-container">
+            <div class="question-nos">
+                <div class="heading"> 
+                    Questions
+                </div>
+            </div>
+            <div id="container">
+                
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script type='text/javascript'>
+            // Generate a dynamic number of inputs
+            var number = 10;
+            // Get the element where the inputs will be added to
+            var container = document.getElementById("container");
+            // code for dynamically added inputs
+            for (i=1;i<=number;i++){
+                const btn = document.createElement("BUTTON");
+                btn.innerHTML = i;
+                container.appendChild(btn);
+                btn.style.fontWeight = "800";   
+                btn.style.width = "20%";
+                btn.style.height = "5vh";
+                btn.style.marginRight= "15px";
+                btn.style.marginBottom = "15px";
+                btn.style.borderRadius = "5px";
+                btn.style.border  = "none"; 
+                btn.style.color="white";
+                btn.style.backgroundColor="#CF0A0A";
+                btn.style.fontSize = "15px";
+                btn.style.marginLeft = "4px";
+                btn.style.cursor="pointer";
+        }
+        
+    </script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

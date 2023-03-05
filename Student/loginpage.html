@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>OES</title>
+    <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <style>
+        *{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: 'poppins';
+}
+.background{
+    /* background-image: linear-gradient(to right,#08045a,#0a2eb8);
+     */
+     background-image: linear-gradient(to right,#08045a,#0a2eb8);
+     height: 100vh;
+     width: 100%;
+}
+.container{
+    display: flex;
+    margin: auto;
+    width: 60%;
+    height: 70vh;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    background-color: white;
+    border-radius: 20px;
+}
+.left-container{
+    background-color: #1b0148;
+    width: 50%;
+    background-image:url('../images/online-entrance-exam.png') ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.right-container{
+    width: 50%;
+}
+.heading{
+    text-align: center;
+    margin-top: 15vh;
+    color: #0b2f8a;
+    font-weight: 900;
+    font-size: x-large;
+}
+.input-form{
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+}
+.input {
+    width: 100%;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #0b2f8a;
+    margin-bottom: 20px;
+    color: #08045a;
+}
+.main-form{
+    margin: 10px 30px 10px 30px;
+}
+label{
+    font-size: 14px;
+}
+.submit{
+    width: 40%;
+    align-items: center;
+    margin: auto;
+    margin-top: 5vh;
+    padding: 8px 25px 8px 25px;
+    border-radius: 10px;
+    background-color: #0b2f8a;
+    border-style: none;
+    color: white;
+    box-shadow:5px 5px 20px 1px #0b2f8a;
+    cursor: pointer;
+}
+form i{
+    cursor: pointer;
+    margin-left: -30px;
+    margin-top: -5px;
+}
+.pass{
+    display: flex;
+}
+#password{
+    padding-top: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <div class="left-container">
+            </div>
+            <div class="right-container">
+                <div class="heading">
+                   Welcome!!!
+                </div>
+                <div class="main-form">
+                <form class="input-form" action="" method="">
+                    <div>
+                    <label for="email">Email</label>
+                    <input class="input" type="email" name="email" id="email" required>
+                    </div>
+                
+                    <label for="password">Password</label>
+                    <div class="pass">
+                    <input class="input" type="password" id="password" required>
+                    <i class="bi bi-eye-slash eye-eye" id="togglePassword"></i>
+                </div>
+                    <input type="submit" class="submit" name="Login" value="Login">
+                
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+
+        // prevent form submit
+        const form = document.querySelector("form");
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

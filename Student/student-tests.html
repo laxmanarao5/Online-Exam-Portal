@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <!-- <link rel="stylesheet" href="styles.css?v=<?php echo time();?>" /> -->
+    <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/all.css">
+    <title>OES</title>
+
+    <style>
+       
+        .student-dashboard-icon,.student-analysis-icon,.student-support-icon,.student-settings-icon{
+    color: #596075;
+}
+.student-dashboard-icon,.student-analysis-icon,.student-support-icon,.student-settings-icon{
+    padding-left: 35px;
+}
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+            width: 100%;
+        }
+        .a{
+            color: white;
+            font-style: bold;
+            padding:5px 10px;
+            border: 1px solid;
+            margin-top: 40px;
+            background-color:blueviolet;
+            text-decoration: none;
+            border-radius:5px; 
+         }
+
+         a:link{
+              text-decoration: none;
+              color: #fff;
+         }
+
+         a:hover{
+            color: white;
+            text-decoration: none;
+
+         }
+
+         .nav-bar{
+            text-align: left;
+            margin-top:1rem;
+            display: inline-block;
+
+         }
+
+         .nav-bar a{
+            margin:3px;
+         }
+
+         .row{
+            height:80vh;
+            background-color: lightgray;
+            border-radius: 10px;
+            margin-top:20px;
+            margin-left:0.2rem;
+            text-align:justify;
+            display:inline-block;
+         }
+
+         .header{
+            margin-left:1rem;
+            margin-top:1rem;
+            display:flex;
+         }
+
+         #form-details{
+            margin-top: 20px;
+
+         }
+
+        #pnode{
+            position: relative;
+            left: 40px;
+            margin: 10px;
+            margin-top: 60px;
+        }
+
+        .btn {
+            background-color: #2252d9;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: RoyalBlue;
+        }
+
+        .child_node {
+            display: flex;
+            flex-direction: row;
+            background-color: #dee3eb;
+            padding: 15px;
+            width: 100%;
+        }
+
+        h1{
+            font-size: 15px;
+            margin-right: 50px;
+        }
+
+        .search-bar {
+            margin-top: 2px;
+            height: 30px;
+            background-color: #2252d9;
+            border-radius: 10px;
+            position:relative;
+            width:200px;
+            margin-left:550px;
+        }
+            
+        .searchbutton {
+            position:absolute;
+            padding-top: 4px;
+            left:10px;
+            width: 18px;
+        }
+
+        .sfield {
+            float: right;
+            margin-top: 5px ;
+            margin-right: 35px;
+            font: 8pt;
+            color: #fff;
+            font-weight: 400;
+            height: 20px;
+            padding: 0;
+            background: transparent;
+            max-width: 125px;
+            border: 0px;
+        }
+
+        .sfield:focus{
+            outline: none;
+        }
+
+        ::placeholder{
+            color: white;
+        }
+
+        .table_container{
+            background-color: #d7dadf;
+            height: auto;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        td, th {
+            border: 1px solid #aca7a7;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .search-icon{
+            color: white;
+        margin-left: 15px;
+        margin-top: 5px;
+        font-size: 16px;
+        }
+
+        button {
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: #1c9b1c;
+            padding: 5px 30px ;
+        }
+
+        .button2 {
+            background-color: #1c9b1c;
+            padding: 5px 25px;
+        }
+        .button3 {
+            background-color:#f44336 ;
+            padding: 5px 25px;
+        }
+
+        .button4 {
+            background-color: #f44336;
+            padding: 7px 2px;
+        }
+        .button5 {
+            background-color: #1c9b1c;
+            padding: 7px 16px;
+        }
+
+        .button6 {
+            background-color: #f44336;
+            padding: 5px 25px;
+        }
+
+    </style>
+</head>
+<body>
+        <div class="navigation">
+            <div class="logo">
+                OES
+            </div>
+            
+            <div class="userlogin">
+                
+                <div onclick="over('user-logout')"><img src="../images/user.JPG"></div>
+                <button class="user-logout" id="user-logout" style="visibility: hidden"><i class="bi bi-box-arrow-right"></i><a class="user-logout-color" href="#">Logout</a></button>
+            </div>
+        </div>
+        <div class="dashboard_container">
+            <div class="dashboard_left_container">
+        <div class="dashboard">
+            <div class="student-student_dashboard">
+            <div class="line" style="display: none;"></div>
+            <div class="student-links">
+            <a href="student-dashboard.html"><i class="fa fa-dashboard student-dashboard-icon"></i><p>Dashboard</p></a></div></div>  
+        <div class="student-tests_dashboard">
+            <div class="line"></div>
+            <div class="student-tests_links">
+            <a href="student-tests.html"><i class="fa fa-pen-clip student-tests-icon"></i><p style="color:white;">Tests</p> </a></div></div>
+
+            <div class="student-analysis_dashboard">
+                <div class="line" style="display: none;">
+    
+                </div>
+                <div class="student-analysis_links">
+            <a href="student-analysis.html"><i class="fa fa-chart-column student-analysis-icon"></i><p>Analysis</p> </a></div>
+        
+        
+        </div>
+
+        <div class="student-queries_dashboard">
+            <div class="line" style="display: none;">
+
+            </div>
+            <div class="student-queries_links">
+        <a href="student-support.html"><i class="fa fa-comment-dots student-support-icon"></i><p>Support</p> </a></div>
+    </div>
+            <!-- <a href=""><i class="fa fa-dashboard dashboard-icon"></i><p>Settings</p></a> -->
+            <div class="student-settings_dashboard">
+                <div class="line" style="display: none;">
+    
+                </div>
+                <div class="student-settings_links">
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    <div class="dashboard_right_container">
+        <!-- <object type="text/html" class="wd" data="page_15.html"></object> -->
+        <div class="container">
+            <div class="nav-bar">
+                <a class="a" title="click here to add new user"><i class="fa fa-calendar" aria-hidden="true"></i>Test Schedule</a>
+            </div>
+            <div class="row">
+                <div class="details">
+                <div class="col-5" >
+                    
+                    
+                </div>
+                
+            </div>
+            <div id="cnode">
+                <div class="child_node">
+                    <h1>Total Count :</h1>
+                    <div class="search-bar">
+                        <i class="fa fa-search search-icon"></i>
+                        <input type="text" placeholder="Search..." class="sfield" >  
+                    </div>  
+                </div>
+                <div class="table_container">
+                    <table>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Exam Information</th>
+                            <th>Test Timings</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Web Development</td>
+                            <td>14/3/2011</td>
+                            <td><button class="button1">Active</button></td>
+                            <td><a style="background-color:transparent; border:none;" href="instruction.html"><button class="button2">Take Test</button></a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Android Development</td>
+                            <td>14/3/2011</td>
+                            <td><button class="button3">Inactive</button></td>
+                            <td><button class="button6">Disabled</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Android Development</td>
+                            <td>14/3/2011</td>
+                            <td><button class="button5">Attempted</button></td>
+                            <td><button class="button6">Disabled</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Android Development</td>
+                            <td>14/3/2011</td>
+                            <td><button class="button4">Not attempted</button></td>
+                            <td><button class="button6">Disabled</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+        
+
+    <script>
+        function over(i) {
+  if(document.getElementById(i).style.visibility=='visible'){
+    document.getElementById(i).style.visibility='hidden';
+  }
+  else
+  document.getElementById(i).style.visibility="visible";
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: 'poppins';
+}
+.container{
+    width: 95%;
+    margin: auto;
+}
+/* navigation starts here */
+.navigation{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2146c7;
+}
+.logo{
+    padding-left: 40px;
+    font-size: larger;
+    color: white;
+    width: 17%;
+    background-color: #282b51;
+    font-weight: 700;
+    line-height: 60px;
+    height: 60px;
+}
+.userlogin img{    
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    margin-top: 8px;
+    float: right;
+    margin-right: 50px;
+}
+
+.user-logout{
+    font-family: "poppins";
+    background-color: #11133e;
+    background-size: cover;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    margin-right: 10px;
+    float: right;
+}
+.userlogin a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+.userlogin button{
+    border: none;
+}
+/* navigation ends here */
+
+/* banner dashboard starts here */
+.dashboard{
+    width: 100%;
+    height: 85vh;
+    background-color: #11133e;
+    /* display: flex; */
+    padding-top: 6vh;
+}
+.line{
+    /* margin-top: 20px; */
+    width: 5px;
+    height: 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+}
+
+.admin-students-icon,.admin-examiner-icon,.admin-queries-icon,.student-dashboard-icon,.student-tests-icon,.student-analysis-icon,.student-support-icon,.student-settings-icon,.examiner-dashboard-icon,.examiner-testassign-icon,.examiner-quespaper-icon,.examiner-analysis-icon,.examiner-queries-icon,.examiner-settings-icon{
+    padding-top: 5px;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+.admin-students-links a,.admin-examiner-links a,.admin-queries-links a,.student-links a,.student-tests_links a,.student-analysis_links a,.student-queries_links a,.student-settings_links a,.examiner-examiner_dashboard-links a,.examiner-testassign-links a,.examiner-quespaper-links a,.examiner-analysis-links a,.examiner-queries-links a,.examiner-settings-links a{
+    padding-bottom: 15px;
+    display: flex;
+    color: white;
+    font-weight: 600;   
+    text-decoration: none;
+    /* padding-top: 5px;  */
+    padding-left: 10px;
+}
+.admin-students-links p,.admin-examiner-links p,.admin-queries-links p,.student-links p,.student-tests_links p,.student-analysis_links p,.student-queries_links p,.student-settings_links p,.examiner-examiner_dashboard-links p,.examiner-testassign-links p,.examiner-quespaper-links p,.examiner-analysis-links p,.examiner-queries-links p,.examiner-settings-links p{
+    padding-top: 2px;
+    padding-left: 10px;
+    color: #596075;
+}
+.admin-student_dashboard,.admin-examiner_dashboard,.admin-queries_dashboard,.student-student_dashboard,.student-tests_dashboard,.student-analysis_dashboard,.student-queries_dashboard,.student-settings_dashboard,.examiner-examiner_dashboard,.examiner-testassign_dashboard,.examiner-quespaper_dashboard,.examiner-analysis_dashboard,.examiner-queries_dashboard,.examiner-settings_dashboard{
+    display: flex;
+}
+/* admin portal ends here */
+
+/* Student portal starts here */
+
+.student-settings_dashboard{
+    margin-top: 52vh;
+}
+.examiner-settings_dashboard{
+    margin-top: 46vh;
+}
+.dashboard_container{
+  width: 100%;
+  height: 85vh;
+  display: flex;
+
+}
+.dashboard_left_container{
+    width: 20%;
+    height: 85vh;
+}
+.dashboard_right_container{
+    width: 80%;
+    height: 91vh;
+    /* background-color: rebeccapurple; */
+}
+/* object{
+    height: 91vh;
+    width: 100%;
+} */
+.wd{
+    width: 100%;
+    height: 90%;
+    padding-top: 5vh; 
+}

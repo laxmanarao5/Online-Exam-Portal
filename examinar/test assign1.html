@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Admin</title>
+    <style type="text/css">
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+
+        a{
+            color: white;
+            font-style: bold;
+            padding:5px 10px;
+            border: 1px solid;
+            margin-top: 40px;
+            background-color:blueviolet;
+            text-decoration: none;
+            border-radius:5px; 
+         }
+
+         a:link{
+              text-decoration: none;
+              color: #fff;
+         }
+
+         a:hover{
+            color: white;
+            text-decoration: none;
+
+         }
+
+         .nav-bar{
+            text-align: left;
+            margin-top:1rem;
+            display: inline-block;
+
+         }
+
+         .nav-bar a{
+            margin:3px;
+         }
+
+         .row{
+            height:80vh;
+            background-color: lightgray;
+            border-radius: 10px;
+            margin-top:20px;
+            margin-left:0.2rem;
+            text-align:justify;
+            display:inline-block;
+         }
+
+         
+
+         #form-details{
+            margin-top: 20px;
+
+         }
+
+        #pnode{
+            position: relative;
+            left: 40px;
+            margin: 10px;
+            margin-top: 60px;
+        }
+
+        .btn {
+            background-color: #2252d9;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: RoyalBlue;
+        }
+
+        
+
+        h1{
+            font-size: 15px;
+            margin-right: 50px;
+        }
+
+        
+        
+        .forms
+		 {
+			margin-left: 5%;
+			margin-top: 20px;
+			height: 50px;
+			
+		 }
+		 #groups1{
+
+                padding-left: 10px;
+				padding-top: 5px;
+				border: 10px;
+		 }
+		 .submit1
+		 {
+			
+			
+		 }
+		 .sub{
+                 background-color:lightpink;
+				 text-align:center;
+				 width:85px;
+				 height: 40px;
+
+		 }
+		 .sub:hover{
+			   background-color: pink;
+			   border-width:2px;
+			   
+		 }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <a href="test assign1.html" title="click here to add new user"><i class="fa fa-plus"></i>Create Test</a>
+            <a href="part2.html" title="click here to add new user"><i class="fa fa-bar-chart"></i>Assigned Test</a>
+    
+        </div>
+        <div class="row">
+            
+            <div class="details">
+            <div class="col-5" >
+                
+                
+            </div>
+            
+        </div>
+        <div id="cnode">
+            <form class="forms">
+				Test Name: <input type = "text" name = "Test_Name">
+               <br><br><br>
+               Schedule Time: <input type = "date" name = "Schedule_Time" >
+			   <br><br><br>
+			   <label for="groups">Add Group:</label>
+              <select id="groups1" name="grouplist" form="form">
+                 <option value="group_1">group_1</option>
+                 <option value="group_2">group_2</option>
+                 <option value="group_3">group_3</option>
+                 <option value="group_4">group_4</option>
+              </select>
+			  <br><br><br>
+			  Add Question: <input type = "text" name = "add_question">
+			  <br><br><br>
+			  <div class="submit1">
+			  <input class="sub" type = "submit" name = "submit" value = "Submit" />
+			  </div>
+            </form>   
+        </div>
+
+        </div>
+        
+        
+    </div>
+ </body>
+</html>

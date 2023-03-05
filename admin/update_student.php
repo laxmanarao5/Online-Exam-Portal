@@ -1,0 +1,201 @@
+<?php
+include("../includes/config.php");
+$id=$_GET['id'];
+$query="SELECT * FROM `users` WHERE `id`='$id';";
+$result=mysqli_query($con,$query);
+$row=$result->fetch_assoc();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"> -->
+	<title>Admin</title>
+	<style type="text/css">
+		.container{
+			display: flex;
+			flex-direction: column;
+			/* border:1px solid black; */
+			/* width:800px;
+			height: 500px; */
+		}
+		a{
+         	color: white;
+         	font-style: bold;
+         	padding:5px 10px;
+         	border: 1px solid;
+         	margin-top: 40px;
+         	background-color:blueviolet;
+         	text-decoration: none;
+         	border-radius:5px; 
+
+
+         }
+         a:link{
+	          text-decoration: none;
+	          color: #fff;
+         }
+         a:hover{
+         	color: white;
+         	text-decoration: none;
+
+         }
+         .nav-bar{
+         	text-align: left;
+         	margin-top:1rem;
+         	display: inline-block;
+
+         }
+         .nav-bar a{
+         	margin:3px;
+         }
+         .row{
+
+         	/* width:670px; */
+			height:80vh;
+         	background-color: lightgray;
+			border-radius: 10px;
+            margin-top:20px;
+            margin-left:0.2rem;
+            text-align:justify;
+            display:inline-block;
+         }
+         .header{
+         	margin-left:1rem;
+         	margin-top:1rem;
+         	display:flex;
+         }
+         #form-details{
+         	margin-top: 20px;
+
+         }
+         input
+         {
+         	display:block;
+            margin-top:20px;
+			/* width: 100%; */
+
+         }
+         .details{
+         	display:flex;
+         }
+         img{
+         	height:200px;
+         }
+         .profile{
+         	/*margin-top:1rem;
+         	margin-left:3rem;*/
+         	height:200px;
+         	width:200px;
+         	position:absolute;
+         	top:50%;
+         	left:50%;
+         	transform:translate(-50%,-50%);
+
+         }
+         #photo{
+         	height: 100%;
+         	width:100%;
+         	border-radius:50%;
+         }
+         #UploadBtn{
+         	height:40px;
+         	width:100%;
+         	position:absolute;
+         	bottom:0;
+         	transform:translate(-50%);
+         	display:none;
+         }
+         #submitBtn{
+        	margin-top:1rem;
+         	position:absolute;
+         	margin-left:70px;
+         }
+         
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="nav-bar">
+			<a href="admin_student_dashboard.html" title="click here to add new user"><i class="fa fa-plus"></i> Add User</a>
+			<a href="admin_students_insights.php" title="click here to add new user"><i class="fa fa-bar-chart"></i> Insights</a>
+        </div>
+		<div class="row">
+			<div class="header">
+				<div><h6>Add new user</h6></div>
+				
+			</div>
+			<div class="details">
+			<div class="col-5" >
+				<form action ="server.php" method="POST" enctype="multipart/form-data">
+					<input type="text" class="form-control form-control-sm mr-1" id="id" value="<?php echo $row['id'] ?>" placeholder="Student ID" name="sid" required>
+					<input type="text" class="form-control form-control-sm mr-1" id="name" value="<?php echo $row['name'] ?>" placeholder="Name" name="name" required>
+					<input type="email" class="form-control form-control-sm mr-1" id="email" value="<?php echo $row['email'] ?>" placeholder="Email ID" name="email" required>
+					<input type="text" class="form-control form-control-sm mr-1" id="Branch" value="<?php echo $row['branch'] ?>" placeholder="Branch" name="branch" required>
+				
+				
+			</div>
+			<div class="col-7">
+				<div class="profile">
+					<img src="uploads/<?php echo $row['dp'];?>" id="photo">
+					<input type="file" id="file" name="dp">
+					<label for="file" id="UploadBtn"></label>
+					<button id="submitBtn" name="updatestudent">Update</button>
+					
+				</div>
+				<!-- <div>
+					<a href="" id="submitBtn">Submit</a>
+				</div> -->
+			</div>
+		</form>
+		</div>
+
+		</div>
+		
+	</div>
+	<!-- <script>
+		const imgDiv=document.querySelector('.profile');
+		const img=document.querySelector('#photo');
+		const file=document.querySelector('#file');
+		const UploadBtn=document.querySelector('#UploadBtn');
+		//if user hover on profile div
+		imgDiv.addEventListener('mouseenter',function()
+		{
+
+           UploadBtn.style.display="block"
+		});
+		//if we hover out from img div
+		imgDiv.addEventListener('mouseleave',function()
+		{
+
+            UploadBtn.style.display="none"
+		});
+
+        //lets work for image showing functionality when we choose an image to upload
+
+        // when we choose a file to upload
+
+        file.addEventListener('change',function()
+        {
+        	//this refers to file
+        	const choosedFile = this.files[0];
+        	if (choosedFile){
+        		const reader=new FileReader();
+        		reader.addEventListener('load',function()
+        		{
+        			img.setAttribute('src',reader.result);
+
+        		});
+        		reader.readAsDataURL('choosedFile');
+        	}
+
+        });
+
+	</script>
+ -->
+</body>
+</html>

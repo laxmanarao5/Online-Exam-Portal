@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"> -->
+	<title>Instruction</title>
+	<style type="text/css">
+		.container{
+			border:1px solid black;
+			width:785px;
+			height: 400px;
+            margin-top:70px;
+            border-radius:25px;
+		}
+        .list{
+             margin-top:30px;
+        }
+        .button1
+        {
+            text-align:center;
+            padding: 15px 32px;
+            margin: 4px 2px;
+
+
+        }
+    </style>
+        
+</head>
+<body onload="myFunction()">
+	<div class="container">
+        <h2 style="text-align: center; margin-top: 30px;"> INSTRUCTIONS </h2>
+        <ul class ="list">
+            <li>You must use a functioning webcam and microphone</li>
+            <li> No cell phones or other secondary devices in the room or test area</li>
+            <li> Your desk/table must be clear or any materials except your test taking device</li>
+            <li> No one else can be in the room with you </li>
+            <li> No talking</li>
+            <li> The testing room must be well-lit and you must be clearly visible</li>
+            <li> No dual screens/monitors</li>
+            <li> Do not leave the camera</li>
+            <li> No use of additional applications or internet</li>
+        </ul>
+        <div class="button1" id="taketest">
+        <a href="student-test-exam.html"><button style="background-color: #4CAF50; height:40px; width:100px; color:white;" type="button"> Take Test</button></a>
+        </div>
+	</div>
+
+    <!-- <object data="student-test-exam.html" type=""></object> -->
+    <script>
+        function myFunction(){
+        var element = document.getElementById("taketest");
+        function openFullScreen(){
+            if(element.requestFullscreen){
+                element.requestFullscreen();
+            }else if(element.webkitRequestFullscreen){
+                element.webkitRequestFullscreen();
+            }else if(element.msRequestFullscreen){
+                element.msRequestFullscreen();
+            }else if(element.mozRequestFullscreen){
+                element.mozRequestFullscreen();
+            }
+        }
+    }
+    </script>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

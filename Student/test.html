@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"> -->
+	<title>test</title>
+	<style type="text/css">
+		.container{
+
+			border:1px solid black;
+			width:785px;
+			height: 425px;
+            margin-top:70px;
+            border-radius:25px;
+		}
+        .forms
+        {
+             margin-top:35px;
+             text-align:center;
+        }
+        #name,#Ecode,#duration,#emarks,#noofQuestions,#description
+        {
+            height: 100%;
+             margin: 0;
+             padding: 0px;
+             border: none;
+        }
+        .m {
+         display: flex;
+         justify-content: space-between;
+         display: inline;
+
+
+         }
+
+       /*.left-group {
+          display: flex;
+          flex: 1;
+         justify-content: flex-start;
+        }
+
+     .right-group {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+       }*/
+    </style>
+</head>
+<body>
+	<div class="container">
+    <div class="forms">
+    <form>
+      <p><label for="fname">Exam Name  :
+             <input type="text" id="name" name="name"><br>
+       </label></p>
+     <p><label for="lname">Exam Code  :
+           <input type="text" id="Ecode" name="code">
+     </label></p>
+     <p><label for="lname">Exam Duration  :
+           <input type="text" id="duration" name="duration">
+     </label></p>
+      <p><label for="lname">Exam Marks  :
+           <input type="text" id="emarks" name="emarks">
+     </label></p>
+      <p><label for="lname"> No of Questions :
+           <input type="text" id="noofQuestions" name="Questions">
+     </label></p>
+      <p><label for="lname">Description     :
+           <input type="text" id="description" name="description">
+     </label></p>
+   </form>
+   </div>
+   <div class="m">
+       <button style="background-color: blue; height:40px; width:100px ; color:white;position: relative;left: 100px; border-radius: 10px;" type="button"> Previous</button>
+        <button style="background-color: blue; height:40px; width:100px; color:white; position: relative;left: 270px; border-radius: 10px; " type="button">Next</button>
+   
+  </div>
+  </div> 
+</body>
+</html>

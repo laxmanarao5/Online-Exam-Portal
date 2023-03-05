@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"> -->
+	<title>Test_Assign</title>
+	<style type="text/css">
+		.container{
+			/* border:1px solid black; */
+			width:120vh;
+			height: 500px;
+            margin-top:30px;
+			margin-left:30px;
+		}
+		a{
+			color: white;
+			font-style: bold;
+			padding:5px 10px;
+			border: 1px solid;
+			margin-top: 40px;
+			background-color:blueviolet;
+			text-decoration: none;
+			border-radius:5px; 
+
+
+		}
+		a:link{
+			 text-decoration: none;
+			 color: #fff;
+		}
+		a:hover{
+			color: white;
+			text-decoration: none;
+		}
+
+         .nav-bar{
+         	text-align: left;
+         	margin-top:1rem;
+         	display: inline-block;
+
+         }
+         .nav-bar a{
+         	margin:3px;
+         }
+         .row{
+
+         	width:670px;
+			height:400px;
+         	background-color: lightgray;
+            margin-top:20px;
+            margin-left:30px;
+            text-align:justify;
+			/*text-align:center;*/
+           
+         }
+         .header{
+         	margin-left:1rem;
+         	margin-top:1rem;
+         	display:flex;
+         }
+		 .forms
+		 {
+			margin-left: 5%;
+			margin-top: 20px;
+			height: 50px;
+			
+		 }
+		 #groups1{
+
+                padding-left: 10px;
+				padding-top: 5px;
+				border: 10px;
+		 }
+		 .submit1
+		 {
+			text-align: center;
+			
+		 }
+		 .sub{
+                 background-color:lightpink;
+				 text-align:center;
+				 width:85px;
+				 height: 40px;
+
+		 }
+		 .sub:hover{
+			   background-color: pink;
+			   border-width:2px;
+			   
+		 }
+        
+       
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="nav-bar">
+			<a href="test assign.html" title="click here to add new user"><i class="fa fa-plus"></i>Create Test</a>
+			<a href="part2.html" title="click here to add new user"><i class="fa fa-bar-chart"></i> Assigned Tests</a>
+        </div>
+		<div  class="row">
+			
+            <form class="forms">
+				Test Name: <input type = "text" name = "Test_Name">
+               <br><br><br>
+               Schedule Time: <input type = "date" name = "Schedule_Time" >
+			   <br><br><br>
+			   <label for="groups">Add Group:</label>
+              <select id="groups1" name="grouplist" form="form">
+                 <option value="group_1">group_1</option>
+                 <option value="group_2">group_2</option>
+                 <option value="group_3">group_3</option>
+                 <option value="group_4">group_4</option>
+              </select>
+			  <br><br><br>
+			  Add Question: <textarea  rows="5" cols="50" placeholder="Add question here...."></textarea>
+			  <br><br><br>
+			  <div class="submit1">
+			  <input class="sub" type = "submit" name = "submit" value = "Submit" />
+			  </div>
+            </form> 
+              
+
+		</div>
+		
+	</div>
+</body>
+</html>
